@@ -1,3 +1,205 @@
-p {
-    color: blue;
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(226, 129, 129); /* Default background */
+}
+
+/* Calculator Header */
+.h1 {
+    display: flex;
+    justify-content: space-around;
+    color: rgb(243, 234, 234);
+    width: 300vw;
+    max-width: 300px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    align-items: self-start;
+}
+
+/* Calculator Styles */
+.calculator {
+    width: 80vw;
+    max-width: 300px;
+    height: 380px;
+    background-color: #1f2d2e;
+    border-radius: 10px;
+    box-shadow: 1px 5px 20px rgba(175, 175, 228, 0.114), -1px -5px 20px rgb(31, 31, 211);
+}
+
+.display {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.display input {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.8), -1px -2px 20px rgba(0, 0, 0, 0.8);
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: right;
+    font-size: 28px;
+}
+
+/* Calculator Buttons */
+.buttons {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.row {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.row button {
+    width: 18%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.8), -1px -2px 20px rgba(0, 0, 0, 0.8);
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.row1 button {
+    color: aquamarine;
+}
+
+.row button:hover {
+    box-shadow: inset 1px 2px 10px rgba(0, 0, 0, 0.8);
+    font-size: small;
+    color: rgba(255, 255, 255, 0.506);
+}
+
+#equal {
+    width: 40%;
+    color: aquamarine;
+}
+
+/* Theme Switcher Styles */
+.theme-switcher {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+/* Stylish Buttons */
+.theme-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #6e6e6e, #111);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: linear-gradient(45deg, #333, #000);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.theme-btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.theme-btn:nth-child(1) {
+    background: linear-gradient(45deg, #1f2d2e, #333);
+}
+
+.theme-btn:nth-child(2) {
+    background: linear-gradient(45deg, #f9f9f9, #dcdcdc);
+    color: black;
+}
+
+.theme-btn:nth-child(3) {
+    background: linear-gradient(45deg, #003366, #66ccff);
+}
+
+.theme-btn:nth-child(4) {
+    background: linear-gradient(45deg, #004d00, #00cc00);
+}
+
+/* Light Theme */
+.light-theme {
+    background-color: #80ede2;
+}
+
+.light-theme .calculator {
+    background-color: #f3c017;
+    color: black;
+}
+
+.light-theme .buttons .row button {
+    background-color: #ddd;
+    color: black;
+}
+
+.light-theme .buttons .row button:hover {
+    background-color: #ccc;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #ebbfbf;
+}
+
+.dark-theme .calculator {
+    background-color: #0c1313;
+    color: white;
+}
+
+/* Blue Theme */
+.blue-theme {
+    background: linear-gradient(to right, #003366, #66ccff);
+}
+
+.blue-theme .calculator {
+    background-color: #003366;
+    color: white;
+}
+
+/* Green Theme */
+.green-theme {
+    background: linear-gradient(to right, #004d00, #00cc00);
+}
+
+.green-theme .calculator {
+    background-color: #004d00;
+    color: white;
 }
